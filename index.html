@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A heartfelt farewell greeting card for Akhila – with love from Vignesh" />
+  <title>Farewell Card – For Akhila 💖</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+</head>
+
+<body>
+
+  <!-- Navigation Dots -->
+  <nav class="nav-dots" aria-label="Page navigation">
+    <div class="nav-dot active" data-page="0" title="Cover"></div>
+    <div class="nav-dot" data-page="1" title="Memories"></div>
+    <div class="nav-dot" data-page="2" title="Card"></div>
+    <div class="nav-dot" data-page="3" title="Name Meaning"></div>
+    <div class="nav-dot" data-page="4" title="Farewell"></div>
+  </nav>
+
+  <!-- Pages Wrapper -->
+  <div class="pages-wrapper" id="pagesWrapper">
+
+    <!-- ==================== PAGE 1 – COVER ==================== -->
+    <section class="page page-cover active" id="page-cover">
+      <div class="sparkle"></div>
+      <div class="sparkle"></div>
+      <div class="sparkle"></div>
+      <div class="sparkle"></div>
+      <div class="sparkle"></div>
+      <div class="sparkle"></div>
+      <div class="petal">🌸</div>
+      <div class="petal">🪻</div>
+      <div class="petal">🌷</div>
+      <div class="petal">🌺</div>
+      <div class="petal">🌼</div>
+
+      <div class="cover-content">
+        <div class="floral-deco">
+          <span>🌷</span><span>🌿</span><span>🌸</span><span>🌺</span><span>🌸</span><span>🌿</span><span>🌷</span>
+        </div>
+        <h1 class="greeting-text">Hi <span class="name-highlight">Akhila</span></h1>
+        <div class="floral-deco bottom">
+          <span>💐</span><span>🍃</span><span>🌹</span><span>🌻</span><span>🌹</span><span>🍃</span><span>💐</span>
+        </div>
+      </div>
+
+      <button class="nav-btn next-btn" onclick="goToPage(1)">
+        <span>Next</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </button>
+    </section>
+
+    <!-- ==================== PAGE 2 – MEMORIES ==================== -->
+    <section class="page page-memories" id="page-memories">
+      <div class="floating-heart">💕</div>
+      <div class="floating-heart">💖</div>
+      <div class="floating-heart">💗</div>
+      <div class="floating-heart">🩷</div>
+      <img src="images/sparkles.png" alt="" class="sparkle-img top-right" />
+      <img src="images/sparkles.png" alt="" class="sparkle-img bottom-left" />
+
+      <div class="memories-container">
+        <!-- Floral border decorations -->
+        <span class="memories-corner tl">🌸</span>
+        <span class="memories-corner tr">🌷</span>
+        <span class="memories-corner bl">🌹</span>
+        <span class="memories-corner br">🌺</span>
+        <span class="memories-side ml">🌿</span>
+        <span class="memories-side mr">🍃</span>
+
+        <h2 class="memories-title">Our Cherished Memories ✨</h2>
+        <div class="photo-grid">
+          <div class="photo-frame">
+            <span class="frame-decoration top-left">🌸</span><span class="frame-decoration top-right">✨</span>
+            <img src="images/pic1.jpeg" alt="Memory 1" class="photo-img" />
+          </div>
+          <div class="photo-frame">
+            <span class="frame-decoration top-left">⭐</span><span class="frame-decoration bottom-right">🌷</span>
+            <img src="images/pic2.jpeg" alt="Memory 2" class="photo-img" />
+          </div>
+          <div class="photo-frame">
+            <span class="frame-decoration top-left">💐</span><span class="frame-decoration top-right">🌟</span>
+            <img src="images/pic3.jpeg" alt="Memory 3" class="photo-img" />
+          </div>
+          <div class="photo-frame-with-text">
+            <div class="photo-frame">
+              <span class="frame-decoration top-right">🦋</span><span class="frame-decoration bottom-right">💫</span>
+              <img src="images/pic4.jpeg" alt="Memory 4" class="photo-img" />
+            </div>
+            <p class="gold-memories-text">Memories ✨</p>
+          </div>
+          <div class="photo-frame">
+            <span class="frame-decoration top-left">🌺</span><span class="frame-decoration top-right">💝</span><span
+              class="frame-decoration bottom-right">🌻</span>
+            <img src="images/pic5.jpeg" alt="Memory 5" class="photo-img" />
+          </div>
+        </div>
+        <p class="memories-caption">Beautiful moments together 💖</p>
+      </div>
+
+      <button class="nav-btn back-btn" onclick="goToPage(0)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 19l-7-7 7-7" />
+        </svg>
+        <span>Back</span>
+      </button>
+      <button class="nav-btn next-btn" onclick="goToPage(2)">
+        <span>Next</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </button>
+    </section>
+
+    <!-- ==================== PAGE 3 – INTERACTIVE CARD ==================== -->
+    <section class="page page-interactive" id="page-interactive">
+      <!-- Floating hearts background -->
+      <div class="ic-hearts-bg" id="ic-hearts-bg"></div>
+
+      <div class="ic-scene">
+        <div class="ic-card" id="ic-card">
+          <!-- Left side: Inside message (revealed when front flap opens) -->
+          <div class="ic-inside">
+            <div class="ic-inside-wrap">
+              <div class="ic-inside-header">
+                <h3 class="ic-farewell-title">✦ Farewell ✦</h3>
+                <p class="ic-farewell-subtitle">Until We Meet Again</p>
+                <p class="ic-farewell-subhead">A Heartfelt Goodbye</p>
+              </div>
+              <div class="ic-inside-divider"></div>
+              <div class="ic-farewell-body">
+                <p>You were more than a manager — you were my first guide in this journey, the one who believed in me
+                  before I fully believed in myself.</p>
+                <p>Every lesson you taught, every moment of patience you offered, every time you pushed me to be better
+                  — those things shaped who I am today. To have been shaped by such a leader — such a rare and luminous
+                  presence — is a privilege I shall carry for a lifetime.</p>
+              </div>
+              <p class="ic-inside-signed">
+                <u>Made With Love ❤️ — By Vighnesh</u>
+              </p>
+            </div>
+          </div>
+          <!-- Front flap (covers the left message, flips open) -->
+          <div class="ic-front" id="ic-front">
+            <div class="ic-front-face">
+              <h2 class="ic-front-title animated infinite swing">Happy Farewell <span
+                  class="name-highlight">Akhila</span> 💖</h2>
+              <button class="ic-open-btn" id="ic-open-btn">Open Card ✉️</button>
+            </div>
+            <div class="ic-front-back"></div>
+            <div class="ic-shadow"></div>
+          </div>
+          <!-- Right side: Photo (always visible) -->
+          <div class="ic-right">
+            <div class="ic-photo-wrap">
+              <!-- Surpise: Different images for before/after opening -->
+              <img src="images/pic2.jpeg" alt="Before" class="ic-photo pic-before" />
+              <img src="images/pic6.jpeg" alt="After" class="ic-photo pic-after" />
+              <div class="ic-photo-caption">Akhila 💖</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Question Dialog -->
+      <div class="ic-dialog-overlay" id="ic-question-dialog">
+        <div class="ic-dialog-content">
+          <h2 class="ic-dialog-title">Will you miss us? 🥺</h2>
+          <div class="ic-dialog-buttons">
+            <button class="ic-dialog-btn ic-btn-yes" id="ic-yes-btn">Yes! 💕</button>
+            <button class="ic-dialog-btn ic-btn-no" id="ic-no-btn">Maybe... 😏</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result Dialog -->
+      <div class="ic-dialog-overlay" id="ic-result-dialog">
+        <div class="ic-dialog-content">
+          <h2 class="ic-dialog-title" id="ic-result-text"></h2>
+        </div>
+      </div>
+
+      <button class="nav-btn back-btn" onclick="goToPage(1)" style="z-index:50;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 19l-7-7 7-7" />
+        </svg>
+        <span>Back</span>
+      </button>
+      <button class="nav-btn next-btn ic-next-page-btn" id="ic-next-page-btn" onclick="goToPage(3)"
+        style="z-index:50; display:none;">
+        <span>Next</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </button>
+    </section>
+
+    <!-- ==================== PAGE 4 – NAME MEANING ==================== -->
+    <section class="page page-name-meaning" id="page-name-meaning">
+      <div class="meaning-bg-effects"></div>
+
+      <div class="meaning-container">
+        <h2 class="meaning-title">🌸 AKHILA – We Are Missing You</h2>
+
+        <div class="acrostic-list" id="acrostic-list">
+          <div class="acrostic-item" data-letter="A"><span class="letter">A</span> – <span class="text">Amazing Smile
+              😊</span></div>
+          <div class="acrostic-item" data-letter="K"><span class="letter">K</span> – <span class="text">Kind Heart
+              💛</span></div>
+          <div class="acrostic-item" data-letter="H"><span class="letter">H</span> – <span class="text">Happy Vibes
+              🌸</span></div>
+          <div class="acrostic-item" data-letter="I"><span class="letter">I</span> – <span class="text">Inspiring Soul
+              ✨</span></div>
+          <div class="acrostic-item" data-letter="L"><span class="letter">L</span> – <span class="text">Lovely Nature
+              🌷</span></div>
+          <div class="acrostic-item" data-letter="A2"><span class="letter">A</span> – <span class="text">Always
+              Cherished 💫</span></div>
+        </div>
+      </div>
+
+      <button class="nav-btn next-btn" id="meaning-next-btn" onclick="goToPage(4)"
+        style="display:none; bottom: 40px; right: 40px; z-index: 100;">
+        <span>Next</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </button>
+    </section>
+
+    <!-- ==================== PAGE 5 – FAREWELL ==================== -->
+    <section class="page page-farewell" id="page-farewell">
+      <div class="floating-star">⭐</div>
+      <div class="floating-star">✨</div>
+      <div class="floating-star">🌟</div>
+      <div class="floating-star">💫</div>
+      <div class="floating-star">⭐</div>
+      <div class="floating-star">✨</div>
+
+      <div class="farewell-content">
+        <div class="farewell-card">
+          <div class="farewell-star">🌟</div>
+          <p class="farewell-text">
+            <strong>We will miss you!</strong><br />
+            Wishing you all the best for your next journey 🌟
+          </p>
+          <div class="farewell-divider"></div>
+          <p class="farewell-closing">
+            Made with love <span class="heart">❤️</span> by Vighnesh
+          </p>
+        </div>
+      </div>
+
+      <button class="nav-btn back-btn" onclick="goToPage(3)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 19l-7-7 7-7" />
+        </svg>
+        <span>Back</span>
+      </button>
+      <button class="nav-btn restart-btn" onclick="goToPage(0)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M1 4v6h6" />
+          <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10" />
+        </svg>
+        <span>Start Again</span>
+      </button>
+    </section>
+
+  </div>
+
+  <script>
+    // ===== PAGE NAVIGATION =====
+    const pages = document.querySelectorAll('.page');
+    const dots = document.querySelectorAll('.nav-dot');
+    let currentPage = 0;
+    let isAnimating = false;
+
+    function goToPage(index) {
+      if (isAnimating || index === currentPage) return;
+      isAnimating = true;
+
+      const oldPage = pages[currentPage];
+      const newPage = pages[index];
+      const direction = index > currentPage ? 1 : -1;
+
+      // Update nav dots
+      dots.forEach((d, i) => d.classList.toggle('active', i === index));
+
+      // Reset any leftover animations first
+      oldPage.style.animation = 'none';
+      newPage.style.animation = 'none';
+
+      // Force browser reflow so animations restart cleanly
+      void oldPage.offsetWidth;
+      void newPage.offsetWidth;
+
+      // Make new page visible for animation
+      newPage.style.opacity = '1';
+      newPage.style.pointerEvents = 'auto';
+
+      // Apply slide animations
+      oldPage.style.animation = direction === 1
+        ? 'slideOutLeft 0.65s cubic-bezier(0.4, 0, 0.2, 1) forwards'
+        : 'slideOutRight 0.65s cubic-bezier(0.4, 0, 0.2, 1) forwards';
+
+      newPage.style.animation = direction === 1
+        ? 'slideInRight 0.65s cubic-bezier(0.4, 0, 0.2, 1) forwards'
+        : 'slideInLeft 0.65s cubic-bezier(0.4, 0, 0.2, 1) forwards';
+
+      setTimeout(() => {
+        // Finalize: set active state, clear inline animations
+        oldPage.classList.remove('active');
+        oldPage.style.animation = '';
+        oldPage.style.opacity = '';
+        oldPage.style.pointerEvents = '';
+
+        newPage.classList.add('active');
+        newPage.style.animation = '';
+        newPage.style.opacity = '';
+        newPage.style.pointerEvents = '';
+
+        currentPage = index;
+        isAnimating = false;
+
+        // Resets when navigating back or between interactive pages
+        if (index === 2) resetInteractiveCard();
+        if (index === 3) resetNameMeaning();
+      }, 680);
+    }
+
+    // Dot navigation
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => goToPage(parseInt(dot.dataset.page)));
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        if (currentPage < pages.length - 1) goToPage(currentPage + 1);
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        if (currentPage > 0) goToPage(currentPage - 1);
+      }
+    });
+
+    // ===== INTERACTIVE CARD (PAGE 3) =====
+    const icCard = document.getElementById('ic-card');
+    const icOpenBtn = document.getElementById('ic-open-btn');
+    const icNextPageBtn = document.getElementById('ic-next-page-btn');
+    const icQuestionDialog = document.getElementById('ic-question-dialog');
+    const icResultDialog = document.getElementById('ic-result-dialog');
+    const icResultText = document.getElementById('ic-result-text');
+    const icHeartsBg = document.getElementById('ic-hearts-bg');
+    const icYesBtn = document.getElementById('ic-yes-btn');
+    const icNoBtn = document.getElementById('ic-no-btn');
+
+    let cardIsOpen = false;
+    let yesScale = 1;     // Tracks how big the Yes button has grown
+
+    // Floating hearts for interactive page
+    function createICHeart() {
+      if (currentPage !== 2) return;
+      const h = document.createElement('div');
+      h.className = 'ic-float-heart';
+      h.innerHTML = '❤️';
+      h.style.left = Math.random() * 100 + '%';
+      h.style.fontSize = (Math.random() * 16 + 10) + 'px';
+      h.style.animationDuration = (Math.random() * 3 + 3) + 's';
+      icHeartsBg.appendChild(h);
+      setTimeout(() => h.remove(), 6000);
+    }
+    setInterval(createICHeart, 400);
+
+    // Open card with flip
+    icOpenBtn.addEventListener('click', () => {
+      if (cardIsOpen) return;
+      icCard.classList.add('ic-opening');
+      setTimeout(() => {
+        icCard.classList.remove('ic-opening');
+        icCard.classList.add('ic-opened');
+        cardIsOpen = true;
+        setTimeout(() => showICDialog(), 1500);
+      }, 800);
+    });
+
+    function showICDialog() {
+      // Reset Yes button scale
+      yesScale = 1;
+      icYesBtn.style.transform = 'scale(1)';
+      icQuestionDialog.style.display = 'flex';
+      const content = icQuestionDialog.querySelector('.ic-dialog-content');
+      content.style.animation = 'none';
+      void content.offsetWidth;
+      content.style.animation = 'icPopIn 0.5s ease-out forwards';
+    }
+
+    // YES button → proceed with farewell message
+    icYesBtn.addEventListener('click', () => {
+      const content = icQuestionDialog.querySelector('.ic-dialog-content');
+      content.style.animation = 'none';
+      void content.offsetWidth;
+      content.style.animation = 'icPopOut 0.3s ease-in forwards';
+
+      setTimeout(() => {
+        icQuestionDialog.style.display = 'none';
+        icResultText.textContent = "We'll miss you too! 💕🥹";
+        icResultDialog.style.display = 'flex';
+        const rc = icResultDialog.querySelector('.ic-dialog-content');
+        rc.style.animation = 'none';
+        void rc.offsetWidth;
+        rc.style.animation = 'icPopIn 0.5s ease-out forwards';
+
+        setTimeout(() => {
+          rc.style.animation = 'none';
+          void rc.offsetWidth;
+          rc.style.animation = 'icPopOut 0.3s ease-in forwards';
+          setTimeout(() => {
+            icResultDialog.style.display = 'none';
+            icNextPageBtn.style.display = 'flex';
+            icNextPageBtn.style.animation = 'none';
+            void icNextPageBtn.offsetWidth;
+            icNextPageBtn.style.animation = 'fadeInUp 0.6s ease-out forwards';
+          }, 300);
+        }, 2000);
+      }, 300);
+    });
+
+    // NO/MAYBE button → makes Yes button grow bigger! Must click Yes eventually
+    icNoBtn.addEventListener('click', () => {
+      yesScale += 0.35;
+      icYesBtn.style.transform = `scale(${yesScale})`;
+      icYesBtn.style.transition = 'transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)';
+
+      // Shake the No button
+      icNoBtn.style.animation = 'none';
+      void icNoBtn.offsetWidth;
+      icNoBtn.style.animation = 'icShakeNo 0.5s ease';
+
+      // Funny text changes on the No button
+      const noTexts = ['Maybe... 😏', 'Hmm... 🤔', 'Are you sure? 😢', 'Think again! 😭', 'Please? 🥺', 'Click Yes! ➡️', 'YESSS!! 💖'];
+      const textIndex = Math.min(Math.floor((yesScale - 1) / 0.35), noTexts.length - 1);
+      icNoBtn.textContent = noTexts[textIndex];
+
+      // If Yes is huge, also add glow effect
+      if (yesScale > 2) {
+        icYesBtn.style.boxShadow = `0 0 ${yesScale * 12}px rgba(6, 214, 160, 0.6)`;
+      }
+    });
+    // ===== PAGE 4 - NAME MEANING LOGIC (Automatic Reveal) =====
+    const acrosticItems = document.querySelectorAll('.acrostic-item');
+    const meaningNextBtn = document.getElementById('meaning-next-btn');
+
+    let currentLetterIdx = 0;
+    let meaningTimer = null;
+
+    function startAutomaticReveal() {
+      // Clear any existing timer to prevent duplicates
+      stopAutomaticReveal();
+
+      currentLetterIdx = 0;
+      acrosticItems.forEach(item => item.classList.remove('revealed'));
+      meaningNextBtn.style.display = 'none';
+
+      // Reveal first letter immediately
+      revealNextLetter();
+    }
+
+    function revealNextLetter() {
+      if (currentLetterIdx < acrosticItems.length) {
+        acrosticItems[currentLetterIdx].classList.add('revealed');
+        currentLetterIdx++;
+
+        if (currentLetterIdx < acrosticItems.length) {
+          meaningTimer = setTimeout(revealNextLetter, 1500); // 1.5-second delay
+        } else {
+          // Finished all letters
+          setTimeout(() => {
+            meaningNextBtn.style.display = 'flex';
+            meaningNextBtn.style.animation = 'icPopIn 0.5s ease-out forwards';
+          }, 1000);
+        }
+      }
+    }
+
+    function stopAutomaticReveal() {
+      if (meaningTimer) {
+        clearTimeout(meaningTimer);
+        meaningTimer = null;
+      }
+    }
+
+    function resetNameMeaning() {
+      stopAutomaticReveal();
+      currentLetterIdx = 0;
+      acrosticItems.forEach(item => item.classList.remove('revealed'));
+      meaningNextBtn.style.display = 'none';
+
+      // Start again when we reach the page
+      startAutomaticReveal();
+    }
+
+    function resetInteractiveCard() {
+      cardIsOpen = false;
+      yesScale = 1;
+      icCard.classList.remove('ic-opening', 'ic-opened');
+      icQuestionDialog.style.display = 'none';
+      icResultDialog.style.display = 'none';
+      icNextPageBtn.style.display = 'none';
+      icYesBtn.style.transform = 'scale(1)';
+      icYesBtn.style.boxShadow = '';
+      icNoBtn.textContent = 'Maybe... 😏';
+    }
+  </script>
+</body>
+
+</html>
