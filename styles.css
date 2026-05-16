@@ -54,6 +54,7 @@ body {
   left: 0;
   width: 100%;
   height: 100vh;
+  height: 100dvh; /* Modern fix for mobile browser bottom bars */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1172,8 +1173,18 @@ body {
   .ic-scene {
     width: 95%;
     height: 400px;
-    transform: scale(0.72);
-    margin: -30px auto 0; /* Center horizontally */
+    transform: scale(0.7);
+    margin: -40px auto 0; /* Center horizontally */
+    z-index: 10;
+  }
+
+  .ic-inside-wrap {
+    padding: 1.5rem 1rem;
+    overflow-y: auto; /* Allow scrolling if text is too long */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Start from top to prevent clipping */
   }
 
   .ic-farewell-title {
@@ -1185,43 +1196,61 @@ body {
   }
 
   .ic-farewell-body {
-    font-size: 0.72rem;
-    line-height: 1.4;
+    font-size: 0.78rem; /* Slightly larger for better readability */
+    line-height: 1.5;
     padding: 0 5px;
+    text-align: left; /* Better for scrolling text */
   }
 
   .ic-inside-signed {
     font-size: 0.85rem;
+    padding-bottom: 10px;
   }
 
   .meaning-container {
-    padding: 1.5rem 1rem;
-    width: 92%;
+    padding: 1.2rem 0.8rem;
+    width: 94%;
+    margin-top: -20px;
   }
 
   .meaning-title {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .acrostic-list {
+    gap: 0.6rem;
   }
 
   .acrostic-item {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
   }
 
   .acrostic-item .letter {
-    font-size: 1.4rem;
-    width: 25px;
+    font-size: 1.3rem;
+    width: 22px;
     margin-right: 5px;
   }
 
   .farewell-card {
-    padding: 25px 15px;
-    width: 92%;
+    padding: 20px 15px;
+    width: 94%;
+    margin-top: -30px;
   }
 
   .farewell-text {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
+
+  .nav-btn {
+    bottom: 15px !important; /* Force to stay within view */
+    padding: 8px 15px;
+    font-size: 0.75rem;
+    z-index: 1000; /* Always on top */
+  }
+
+  .next-btn, .restart-btn { right: 15px !important; }
+  .back-btn { left: 15px !important; }
 }
 
 /* Extra Small (up to 360px) */
